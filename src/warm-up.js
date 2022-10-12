@@ -20,13 +20,13 @@ var inStock = 3;
 
 // Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make 
 // the inStock count double what it currently is.
-var currentStock = inStock;
+var stockCount = inStock;
 inStock = currentStock*2;
 
 
 // Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack! 
 // Use a built in math operator to decrement the inStock count by 1.
-inStock = currentStock -1;
+inStock = stockCount -1;
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the food you chose is your favorite food or not
@@ -52,6 +52,11 @@ if (inStock < 20) {
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement 
 // 'We need to get some more [food].'
 
+if(stockCount >= 1) {
+    console.log(`I'm going to eat some ${food}!`)
+} else {
+    console.log(`We need to get some more ${food}.`)
+}
 
 
 // Express the following in code: If the variable "isFavorite" is true,
@@ -59,7 +64,11 @@ if (inStock < 20) {
 // statement 'I recently ate [food]'. In either case, the value stored in
 // the "food" variable should be included in the logged statement.
 
-
+if(isFavorite === true) {
+    console.log(`My favorite food is ${food}!`)
+} else {
+    console.log(`I recently ate ${food}.`)
+}
 
 //------------------------- Arrays -------------------------//
 
