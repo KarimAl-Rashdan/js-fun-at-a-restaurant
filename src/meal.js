@@ -21,6 +21,14 @@ function decreasePrice(originalPrice) {
   var newPrice = originalPrice - discountPrice
   return newPrice
 }
+function createRecipe(deliciousName, fullList, foodType) {
+  var recipe = {
+    title: deliciousName,
+    ingredients: fullList,
+    type: foodType
+  }
+  return recipe
+}
 
 
 module.exports = {
@@ -29,7 +37,7 @@ module.exports = {
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
 
 
