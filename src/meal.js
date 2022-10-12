@@ -8,12 +8,15 @@ function createMenuItem(deliciousName, actualPrice, foodType) {
     type: foodType
   }
 }
+function addIngredients(food, fullList) {
+  return fullList.push(food)
+}
 
 
 module.exports = {
   nameMenuItem,
   createMenuItem,
-  // addIngredients,
+  addIngredients,
   // formatPrice,
   // decreasePrice,
   // createRecipe
