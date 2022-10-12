@@ -2,11 +2,12 @@ function nameMenuItem(name) {
   return `Delicious ${name}`
 }
 function createMenuItem(deliciousName, actualPrice, foodType) {
-  return {
+  var menuItemDetails = {
     name: deliciousName,
     price: actualPrice,
     type: foodType
   }
+  return menuItemDetails
 }
 function addIngredients(food, fullList) {
   if(!fullList.includes(food)){
