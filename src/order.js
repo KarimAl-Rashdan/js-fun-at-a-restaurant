@@ -28,7 +28,20 @@ function listItems(orderList) {
   }
   return finalList.join(`, `)
 }
-
+function searchOrder(orderList, foodItem) {
+  var found = false
+  for (var i = 0; i < orderList.length; i++) {
+    if (orderList[i].item === foodItem) {
+    // console.log(orderList[i].item)
+    // var itemName = orderList[i].item
+    // if(orderList.includes(orderList[i].item)) {
+    //   console.log("THIS IS TRUE", true)
+      found = true
+    } 
+  }
+    return found
+  
+}
 
 
 
@@ -36,5 +49,5 @@ module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
