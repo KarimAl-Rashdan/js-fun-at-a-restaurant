@@ -11,16 +11,15 @@ function refundOrder(orderNum, orderList) {
     var uniqueNumber = orderList[i].orderNumber
     // console.log("orderNumber for each object", uniqueNumber)
   
-  if(uniqueNumber === orderNum){
-    var newList = orderList.splice(i, 1)
-    return newList
-    
-
-  }
-  }
-    
+    if(uniqueNumber === orderNum){
+      var newList = orderList.splice(i, 1)
+      return newList
+    }
+  }  
 }
+function listItems() {
 
+}
 
 
 
@@ -28,6 +27,6 @@ function refundOrder(orderNum, orderList) {
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 }
