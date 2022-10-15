@@ -20,8 +20,21 @@ function addMenuItem(restaurant, itemDetails) {
   } 
   return restaurant.menus
 }
+function removeMenuItem(restaurant, itemName, itemType) {
+  var itemDetails = restaurant.menus[itemType]
+  // console.log("current array:", restaurant.menus)
+  for (var i = 0; i< itemDetails.length; i++){
+    if(itemDetails[i].name === itemName)
+    {
+      restaurant.menus[itemType].splice(i,1)
+      // console.log("updated array", restaurant.menus)
+      return`No one is eating our ${itemName} - it has been removed from the ${itemType} menu!`
+    }
+  }
+  return `Sorry, we don't sell ${itemName}, try adding a new recipe!`
+}
 module.exports = {
   createRestaurant, 
   addMenuItem,
-  // removeMenuItem
+  removeMenuItem
 }
